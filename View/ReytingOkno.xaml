@@ -1,0 +1,19 @@
+﻿<Window x:Class="pract5Tikolka.Views.ReytingOkno"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pract5Tikolka.Views"
+        mc:Ignorable="d"
+        Title="ReytingOkno" Height="450" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.19*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Рейтинговая таблица" FontSize="30px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <DataGrid IsReadOnly="True" ItemsSource="{Binding ReytingTypes}" Grid.Row="1"/>
+        <Button Grid.Row="2" Content="Вернуться назад" FontSize="20px" Click="Button_Click"/>
+    </Grid>
+</Window>

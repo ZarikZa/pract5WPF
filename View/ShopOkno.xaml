@@ -1,0 +1,26 @@
+﻿<Window x:Class="pract5Tikolka.View.ShopOkno"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pract5Tikolka.View"
+        mc:Ignorable="d"
+        Title="ShopOkno" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ExitBtm" Content="Выйти" Click="ExitBtm_Click"/>
+        <Image Grid.Column="1" Grid.Row="1" Width="300px" Height="300px" Source="/Парамонова.png" Stretch="Fill"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30px" Text="Цена: -10000000"/>
+        <Button x:Name="BuyBtm" Content="Купить" Grid.Column="1" Grid.Row="3" Command="{Binding ClickBuy}"/>
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="pract5Tikolka.View.KlikkerOkno"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pract5Tikolka.View"
+        mc:Ignorable="d"
+        Title="KlikkerOkno" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ExitBtm" Content="Выйти" Click="ExitBtm_Click"/>
+        <Button Grid.Column="1" Grid.Row="1" Width="200px" Height="200px" Command="{Binding ClickMoney}">
+            <Image Height="200px" Width="170px" Source="/logoq.png" Stretch="Fill"/>
+        </Button>
+        <TextBlock x:Name="Money"  Grid.Column="1" Text="{Binding Money, Mode=TwoWay}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30px"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Нажимай на логотип МПТ" FontSize="30px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="ShopBtm" Content="Магазин" Grid.Column="2" Click="ShopBtm_Click"/>
+    </Grid>
+</Window>
